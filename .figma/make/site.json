@@ -1,0 +1,10 @@
+{
+  "description": "Showcases Uplink Enterprises IT products and services with clear navigation, detailed offerings, and easy contact options for business clients.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

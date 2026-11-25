@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Executive MNC Corporate Palette (Accenture / IBM / Infosys inspired) */
+    --brand-blue: #0B3D91;
+    --brand-blue-hover: #082B69;
+    --brand-blue-light: #1D4ED8;
+    
+    --navy-hero: #0A1F44;
+    --navy-footer: #07152F;
+    
+    --accent-it: #0E7490;     /* Controlled Teal for IT Services */
+    --accent-soft: #4338CA;   /* Controlled Indigo for Software */
+    
+    --text-heading: #0F172A;
+    --text-body: #475569;
+    --text-muted: #64748B;
+    
+    --bg-light: #FFFFFF;
+    --bg-surface: #F8FAFC;
+    --bg-subtle: #F1F5F9;
+    --border-light: #E2E8F0;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-body);
+    background-color: var(--bg-light);
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    color: var(--text-body);
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+  }
+
+  /* Strict Sentence Case and Clean Contrast for Corporate Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  /* Accessible focus indicators with standard blue ring */
+  *:focus-visible {
+    outline: 2px solid #0B3D91;
+    outline-offset: 2px;
+  }
+
+  /* Minimum 44x44px touch target guidelines */
+  button, a {
+    touch-action: manipulation;
+  }
+
+  /* Accessibility: Prefers reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Scroll-margin for smooth navigation without header collision */
+[id] {
+  scroll-margin-top: 96px;
+}
